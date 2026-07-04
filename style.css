@@ -45,17 +45,17 @@ body {
 
 .flor {
   position: absolute;
-  width: 50%;
-  max-width: 230px;
+  width: 100%;
+  max-width: 480px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   mix-blend-mode: multiply;
   z-index: 2;
 }
-.flor-sup-esq { top: -8%;    left: -8%;  transform: rotate(135deg); }
-.flor-sup-dir { top: -8%;    right: -8%; transform: rotate(-135deg); }
-.flor-inf-esq { bottom: -8%; left: -8%;  transform: rotate(45deg); }
-.flor-inf-dir { bottom: -8%; right: -8%; transform: rotate(-45deg); }
+.flor-sup-esq {  top: -26%;  left: -35%;  transform: rotate(135deg);}
+.flor-sup-dir {  top: -26%;  right: -33%;  transform: rotate(-135deg);}
+.flor-inf-dir {  bottom: -27%;  right: -36%;  transform: rotate(-44deg);}
+.flor-inf-esq {  bottom: -26%;  left: -35%;  transform: rotate(21deg);}
 
 .conteudo-texto {
   position: relative;
