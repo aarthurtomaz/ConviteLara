@@ -18,21 +18,37 @@
       <h2 class="lista-titulo">Sugestões de Presentes</h2>
 
       <ul class="lista-presentes">
-        <li>Fraldas (tamanho P ou M)</li>
+        <li>Fraldas (tam. P ou M)</li>
         <li>Lenços umedecidos</li>
         <li>Pomada para assaduras</li>
-        <li>Roupinhas (tamanho P)</li>
-        <li>Mimos para a mamãe e o papai também são bem-vindos!</li>
+        <li>Sabonete líquido</li>
+        <li>Toalhas de boca</li>
+        <li>Cueiro</li>
+        <li>Meias</li>
+        <li>Roupinhas (tam. P)</li>
       </ul>
 
-      <a href="https://wa.me/SEUNUMERODOWHATTSAPP?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20no%20Ch%C3%A1%20de%20Beb%C3%AA%20da%20Lara." target="_blank" class="btn-whatsapp">
+      <p class="mensagem-extra">Se preferir, mimos para a mamãe e o papai também são muito bem-vindos!</p>
+
+      <a href="#" id="confirmar-presenca" class="btn-whatsapp">
         Confirmar Presença
       </a>
 
       <a href="index.html" class="link-voltar">Voltar para o convite</a>
     </div>
   </div>
-
-  <script src="script.js"></script>
+  
+  <script>
+    document.getElementById('confirmar-presenca').addEventListener('click', function(event) {
+      event.preventDefault(); // Impede o comportamento padrão do link
+      
+      // Coloque o seu número de WhatsApp com o código do país, sem o '+' ou '00'. Ex: 5511999998888
+      const numeroWhatsapp = 'SEUNUMERODOWHATTSAPP'; 
+      const texto = 'Vou comparecer na Festa da Princesa Lara';
+      const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
+      
+      window.open(urlWhatsapp, '_blank');
+    });
+  </script>
 </body>
 </html>
