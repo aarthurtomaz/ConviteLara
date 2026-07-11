@@ -8,6 +8,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Ajustes de layout para a página de presentes */
+    .lista-presentes-wrapper {
+      justify-content: space-between; /* Empurra o conteúdo para cima e o rodapé para baixo */
+      padding-top: 5vh; /* Reduzido para subir o conteúdo */
+      padding-bottom: 5vh;
+    }
+    .lista-titulo {
+      margin-bottom: 3vh; /* Reduzido para subir o conteúdo */
+    }
+
+    .lista-conteudo-principal, .lista-rodape {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .lista-presentes-categoria {
+      width: 100%;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(18px, 5vw, 22px);
+      margin-top: 2.5vh; /* Reduzido para compactar */
+      padding-bottom: 1vh;
+      /* border-bottom: 2px dotted #e3a8ac; */ /* Pontilhado removido */
+      text-align: center;
+      margin-bottom: 1.5vh;
+    }
+
+    .lista-presentes {
+      /* Altera para colunas flexíveis que se adaptam à largura da tela, evitando quebra de texto */
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      line-height: 1.8; /* Reduzido para compactar a lista */
+    }
+
+    .lista-presentes li:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+    .link-voltar {
+      margin-top: 3vh; /* Reduzido para não empurrar o botão para cima */
+    }
+  </style>
 </head>
 <body>
 
@@ -15,26 +60,47 @@
     <img src="WhatsApp Image 2026-07-03 at 16.12.20.jpeg" alt="Fundo" class="img-fundo">
 
     <div class="lista-presentes-wrapper">
-      <h2 class="lista-titulo">Sugestões de Presentes</h2>
+      <div class="lista-conteudo-principal">
+        <h2 class="lista-titulo">Sugestões de Presentes</h2>
 
-      <ul class="lista-presentes">
-        <li>Fraldas (tam. P ou M)</li>
-        <li>Lenços umedecidos</li>
-        <li>Pomada para assaduras</li>
-        <li>Sabonete líquido</li>
-        <li>Toalhas de boca</li>
-        <li>Cueiro</li>
-        <li>Meias</li>
-        <li>Roupinhas (tam. P)</li>
-      </ul>
+        <h3 class="lista-presentes-categoria">🍼 Higiene</h3>
+        <ul class="lista-presentes">
+          <li>Fraldas (M e G)</li>
+          <li>Lenços umedecidos</li>
+          <li>Pomada para assaduras</li>
+          <li>Toalhas com capuz</li>
+          <li>Sabonete líquido</li>
+          <li>Shampoo para bebê</li>
+          <li>Escova e pente</li>
+        </ul>
 
-      <p class="mensagem-extra">Se preferir, mimos para a mamãe e o papai também são muito bem-vindos!</p>
+        <h3 class="lista-presentes-categoria">👕 Roupinhas</h3>
+        <ul class="lista-presentes">
+          <li>Bodies manga curta/longa</li>
+          <li>Mijões/calças</li>
+          <li>Macacões</li>
+          <li>Meias</li>
+          <li>Touquinhas</li>
+          <li>Luvas (recém-nascido)</li>
+          <li>Casaquinhos</li>
+          <li>Cueiro</li>
+        </ul>
 
-      <a href="#" id="confirmar-presenca" class="btn-whatsapp">
-        Confirmar Presença
-      </a>
+        <h3 class="lista-presentes-categoria">🍽️ Alimentação</h3>
+        <ul class="lista-presentes">
+          <li>Babadores</li>
+          <li>Paninhos de boca</li>
+          <li>Escova de mamadeira</li>
+        </ul>
+      </div>
 
-      <a href="index.html" class="link-voltar">Voltar para o convite</a>
+      <div class="lista-rodape">
+        <a href="#" id="confirmar-presenca" class="btn-whatsapp">
+          Confirmar Presença
+        </a>
+
+        <a href="index.html" class="link-voltar">Voltar para o convite</a>
+      </div>
     </div>
   </div>
   
@@ -43,8 +109,8 @@
       event.preventDefault();
       
       // Insira o número do WhatsApp com o código do país e DDD (ex: 5551999998888)
-      const numeroWhatsapp = 'SEUNUMERODOWHATTSAPP'; 
-      const texto = 'Vou comparecer na Festa da Princesa Lara!!';
+      const numeroWhatsapp = '555191314697'; 
+      const texto = 'Vou comparecer na Festa da Princesa Lara!!🥰';
       
       const url = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank');
