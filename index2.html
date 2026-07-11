@@ -52,6 +52,12 @@
     .link-voltar {
       margin-top: 3vh; /* Reduzido para não empurrar o botão para cima */
     }
+
+    .item-largo {
+      grid-column: 1 / -1; /* Faz o item ocupar a linha inteira */
+      text-align: center;
+      padding: 0 10%; /* Adiciona um pequeno preenchimento para não ficar colado nas bordas */
+    }
   </style>
 </head>
 <body>
@@ -76,30 +82,25 @@
 
         <h3 class="lista-presentes-categoria">👕 Roupinhas</h3>
         <ul class="lista-presentes">
-          <li>Bodies manga curta/longa</li>
           <li>Mijões/calças</li>
           <li>Macacões</li>
           <li>Meias</li>
           <li>Touquinhas</li>
-          <li>Luvas (recém-nascido)</li>
           <li>Casaquinhos</li>
           <li>Cueiro</li>
+          <li class="item-largo">Luvas (recém-nascido)</li>
         </ul>
 
         <h3 class="lista-presentes-categoria">🍽️ Alimentação</h3>
         <ul class="lista-presentes">
           <li>Babadores</li>
           <li>Paninhos de boca</li>
-          <li>Escova de mamadeira</li>
+          <li class="item-largo">Escova de mamadeira</li>
         </ul>
       </div>
 
       <div class="lista-rodape">
-        <a href="#" id="confirmar-presenca" class="btn-whatsapp">
-          Confirmar Presença
-        </a>
-
-        <a href="index.html" class="link-voltar">Voltar para o convite</a>
+       <a href="#" id="confirmar-presenca" class="btn-whatsapp">Confirmar Presença</a><a href="index.html" class="link-voltar">Voltar para o convite</a>
       </div>
     </div>
   </div>
